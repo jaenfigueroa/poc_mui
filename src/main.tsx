@@ -8,10 +8,15 @@ import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 // CSS BASELINE - RESET CSS DE MUI
 import CssBaseline from '@mui/material/CssBaseline'
+//PROVEER EL TEMA DE MUI
+import { ThemeProvider } from '@mui/material/styles'
+import appTheme from './theme/index.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <CssBaseline />
-    <App />
+    <ThemeProvider theme={appTheme}>
+      <CssBaseline enableColorScheme />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 )
