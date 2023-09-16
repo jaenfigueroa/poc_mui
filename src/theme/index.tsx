@@ -1,24 +1,9 @@
-import { createTheme } from '@mui/material'
+import { createTheme, responsiveFontSizes } from '@mui/material'
 
-const appTheme = createTheme({
+let appTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#ff3366',
-      light: '#ff6c95',
-      dark: '#d7295f',
-      '50': '#ffe6ed',
-      '100': '#ffbfd2',
-      '200': '#ff96b3',
-      '300': '#ff6c95' /* light */,
-      '400': '#ff4d7d',
-      '500': '#ff3366' /* main */,
-      '600': '#ee2e63',
-      '700': '#d7295f' /* dark */,
-      '800': '#c2235c',
-      '900': '#9e1956',
-    },
-    secondary: {
       main: '#6816f7',
       light: '#9e6bfb',
       dark: '#4600e8',
@@ -32,6 +17,23 @@ const appTheme = createTheme({
       '700': '#4600e8' /* dark */,
       '800': '#2b00e4',
       '900': '#0000df',
+      // contrastText: '#fff', // COLOR DE TEXTO PARA MAIN
+    },
+    secondary: {
+      main: '#ff3366',
+      light: '#ff6c95',
+      dark: '#d7295f',
+      '50': '#ffe6ed',
+      '100': '#ffbfd2',
+      '200': '#ff96b3',
+      '300': '#ff6c95' /* light */,
+      '400': '#ff4d7d',
+      '500': '#ff3366' /* main */,
+      '600': '#ee2e63',
+      '700': '#d7295f' /* dark */,
+      '800': '#c2235c',
+      '900': '#9e1956',
+      // contrastText: '#fff', // COLOR DE TEXTO PARA MAIN
     },
     common: {
       white: '#fefefe',
@@ -44,4 +46,11 @@ const appTheme = createTheme({
   },
 })
 
-export default appTheme
+// PARA PODER USAR AQUI LOS VALORES QUE YA SE HA ESTABLECIDO ANTES
+appTheme = createTheme(appTheme, {})
+
+const responsiveTheme = responsiveFontSizes(appTheme, {
+  factor: 4,
+})
+
+export default responsiveTheme
