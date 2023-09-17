@@ -16,6 +16,18 @@ const App = () => {
     <>
       {/* TOOGLE PARA CAMBIAR DE TEMAS */}
       <ToogleTheme />
+      <Typography variant='h3' component='h3'>
+        Hola mundo
+      </Typography>
+      <Button variant='outlined' size='small'>
+        Comprar small
+      </Button>
+      <Button variant='outlined' size='medium'>
+        Comprar medium
+      </Button>
+      <Button variant='outlined' size='large'>
+        Comprar large
+      </Button>
 
       {/* OTROS */}
       <Box component='div' display={'flex'} gap={1} flexDirection={'column'} alignItems={'start'}>

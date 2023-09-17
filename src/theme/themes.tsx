@@ -53,6 +53,18 @@ const THEME_LIGHT = createTheme({
       default: '#fafafa',
     },
   },
+  // components: {
+  //   MuiButton: {
+  //     styleOverrides: {
+  //       root: {
+  //         color: '#f0f',
+  //         [theme.breakpoints.up('md')]: {
+  //           backgroundColor: '#ff0',
+  //         },
+  //       },
+  //     },
+  //   },
+  // },
 })
 
 // TEMA OSCURO
