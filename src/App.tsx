@@ -6,19 +6,37 @@ import {
   Button,
   Container,
   Paper,
+  Slider,
   Typography,
 } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import ToogleTheme from './theme/toogleTheme'
+import SliderCustom from './components/SliderCustom'
 
 const App = () => {
   return (
     <>
       {/* TOOGLE PARA CAMBIAR DE TEMAS */}
       <ToogleTheme />
+      <SliderCustom />
       <Typography variant='h3' component='h3'>
         Hola mundo
       </Typography>
+      <Slider
+        sx={{
+          color: 'red',
+          '& .MuiSlider-thumb': {
+            borderRadius: '1px',
+          },
+          '& .MuiSlider-track': {
+            backgroundColor: 'blue',
+          },
+          '& .MuiSlider-rail': {
+            backgroundColor: 'green',
+          },
+        }}
+      />
+
       <Button variant='outlined' size='small'>
         Comprar small
       </Button>
@@ -87,7 +105,7 @@ const App = () => {
       <Box>
         <Paper>Hola mundo</Paper>
       </Box>
-      <Button color='info' variant='contained'>
+      <Button color='info' variant='outlined'>
         Hola mundo
       </Button>
       <Typography variant='h1'>Este es un título</Typography>
