@@ -7,16 +7,18 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 // CSS BASELINE - RESET CSS DE MUI
-import CssBaseline from '@mui/material/CssBaseline'
+// import CssBaseline from '@mui/material/CssBaseline'
+
 //PROVEER EL TEMA DE MUI
-import { ThemeProvider } from '@mui/material/styles'
-import appTheme from './theme/index.tsx'
+// import { THEME_DARK_RESPONSIVE, THEME_LIGHT_RESPONSIVE } from './theme/index.tsx'
+
+// CONTEXT PARA EL TEMA DE MUI
+import { ToggleColorMode } from './theme/themeContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ThemeProvider theme={appTheme}>
-      <CssBaseline enableColorScheme />
+    <ToggleColorMode>
       <App />
-    </ThemeProvider>
+    </ToggleColorMode>
   </React.StrictMode>
 )
