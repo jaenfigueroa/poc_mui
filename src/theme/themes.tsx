@@ -1,4 +1,4 @@
-import { PaletteColorOptions, createTheme, responsiveFontSizes } from '@mui/material'
+import { PaletteColorOptions, Theme, createTheme, responsiveFontSizes } from '@mui/material'
 
 const PRIMARY_COLORS: PaletteColorOptions = {
   main: '#6816f7',
@@ -35,7 +35,7 @@ const SECONDARY_COLORS: PaletteColorOptions = {
 }
 
 // TEMA CLARO CON FUENTE RESPONSIVE
-export const THEME_LIGHT = responsiveFontSizes(
+export const THEME_LIGHT: Theme = responsiveFontSizes(
   createTheme({
     palette: {
       mode: 'light',
@@ -74,7 +74,7 @@ export const THEME_LIGHT = responsiveFontSizes(
 )
 
 // TEMA OSCURO HEREDANDO FUENTE RESPONSIVE
-export const THEME_DARK = createTheme({
+export const THEME_DARK: Theme = createTheme({
   ...THEME_LIGHT,
   palette: {
     mode: 'dark',

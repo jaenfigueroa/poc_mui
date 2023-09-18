@@ -2,11 +2,13 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Autocomplete,
   Box,
   Button,
   Container,
   Paper,
   Slider,
+  TextField,
   Typography,
 } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
@@ -18,6 +20,22 @@ const App = () => {
     <>
       {/* TOOGLE PARA CAMBIAR DE TEMAS */}
       <ToogleTheme />
+      <Autocomplete
+        disablePortal
+        id='combo-box-demo'
+        options={['vaca', 'cerdo', 'caballo']}
+        sx={{ width: 300 }}
+        renderInput={(params) => <TextField {...params} label='Movie' />}
+        size='small'
+      />
+      <Autocomplete
+        disablePortal
+        id='combo-box-demo'
+        options={['vaca', 'cerdo', 'caballo']}
+        sx={{ width: 300 }}
+        renderInput={(params) => <TextField {...params} label='Movie' />}
+        size='medium'
+      />
       <SliderCustom />
       <Typography variant='h3' component='h3'>
         Hola mundo
