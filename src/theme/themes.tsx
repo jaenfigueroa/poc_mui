@@ -47,7 +47,7 @@ export const THEME_LIGHT: Theme = responsiveFontSizes(
       },
       common: {
         white: '#fff',
-        black: '#202020',
+        black: '#151515',
       },
       background: {
         paper: '#fff',
@@ -85,8 +85,8 @@ export const THEME_DARK: Theme = createTheme({
       ...THEME_LIGHT.palette.secondary,
     },
     background: {
-      paper: '#202020',
-      default: '#202020',
+      paper: '#151515',
+      default: '#151515',
     },
   },
 })
