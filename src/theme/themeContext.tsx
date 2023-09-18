@@ -1,7 +1,7 @@
 import { PropsWithChildren, createContext, useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { CssBaseline } from '@mui/material'
-import { THEME_DARK_RESPONSIVE, THEME_LIGHT_RESPONSIVE } from './themes'
+import { THEME_DARK, THEME_LIGHT } from './themes'
 
 // CONTEXTO
 export const ColorModeContext = createContext({ toggleColorMode: () => {} })
@@ -18,10 +18,7 @@ export const ToggleColorMode = ({ children }: PropsWithChildren) => {
     []
   )
 
-  const theme = useMemo(
-    () => createTheme(mode === 'light' ? THEME_LIGHT_RESPONSIVE : THEME_DARK_RESPONSIVE),
-    [mode]
-  )
+  const theme = useMemo(() => createTheme(mode === 'light' ? THEME_LIGHT : THEME_DARK), [mode])
 
   return (
     <ColorModeContext.Provider value={colorMode}>
